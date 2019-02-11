@@ -1,0 +1,23 @@
+<%= form_for(@word, url: admin_category_words_path) do |f| %>
+Words:
+ <ul>
+   <%= f.fields_for :wordchoices do |choices_form| %>
+     <li>
+       <%= choices_form.label :word %>
+       <%= choices_form.text_field :word %>
+       
+       <%= choices_form.label :choice1 %>
+       <%= choices_form.text_field :choice1 %>
+       
+       <%= choices_form.label :choice2 %>
+       <%= choices_form.text_field :choice2 %>
+       
+       <%= choices_form.label :choice3 %>
+       <%= choices_form.text_field :choice3 %>
+       
+       <%= choices_form.label :choice4 %>
+       <%= choices_form.text_field :choice4 %>
+     </li>
+    <% end %>
+ </ul>
+<% end %>

@@ -1,0 +1,17 @@
+<%= provide(:title, "All categories") %>
+<h1>Manage Categories</h1>
+<%= link_to "Create Category", new_admin_category_path %>  　
+<ul class="categories">
+  <% @categories.each do |category| %>
+   <table class="table table-bordered table-index">
+     <tbody>
+     <th width="180"><%= link_to category.title, admin_category_path(category) %></th>
+     <th width="180"><%= category.description %></th>
+     <th width="180"><%= link_to "edit", edit_admin_category_path(category) %>
+     |<%= link_to "delete", admin_category_path(category), method: :delete,
+                                      data: { confirm: "You sure?" } %>
+     </th>
+     </tbody>
+   </table>
+  <% end %> 
+</ul>

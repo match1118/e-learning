@@ -1,0 +1,14 @@
+<%= provide(:title, @category.name) %>
+<%= form_for @category do |f| %>
+<div class="row">
+  <h1><%= @category %></h1>
+   <%= form.fields_for :word do |word| %>
+    <h2><%= word.label :name %></h2>
+    <%= f.word.fields_for :wordchoices do |choices| %>
+      <li>
+       <%= button_to choices.name , {controller: 'answer', action: 'create'}, { method: :post, id: 'choices.id' } %>
+      </li>
+    <% end %>
+   <% end %>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+<%= provide(:button_text, "Save words") %>
+<%= form_for(@word, url: admin_category_words_path) do |f| %>
+Words:
+   <li>
+     <%= f.label :name %>
+     <%= f.text_field :name %>
+   </li>
+   <%= f.fields_for :wordchoices do |choices_form| %>
+   Word choice:
+     <li>
+       <%= choices_form.label :name %>
+       <%= choices_form.text_field :name %>
+       <%= choices_form.label :correct %>
+       <%= choices_form.check_box :correct, {}, true, false %>
+     </li>
+   <% end %>
+   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
