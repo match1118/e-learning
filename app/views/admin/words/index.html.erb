@@ -1,20 +1,18 @@
 <%= provide(:title, "All words") %>
-<h1><%= @word.name %></h1>
+<h1><%= @category.title %></h1>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <div class="row index">
-            <table class="table table-bordered index-table">
-                <tbody>
-                    <tr>
-                      <th width="180">Word</th>
-                      <th width="180">Answer</th>
-                      <th width="180">Settings</th>
-                    </tr>
-                    <tr>
-                        <th width="180"><%= @word %></th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+ <div class="col-md-6 col-md-offset-3">
+  <div class="row index">
+    <table class="table table-bordered index-table">
+        <tbody>
+            <tr>
+             <th width="180">Word</th>
+             <th width="180">Answer</th>
+             <th width="180">Settings</th>
+            </tr>
+            <%= render @words %>
+        </tbody>
+    </table>
+  </div>
+ </div>
 </div>

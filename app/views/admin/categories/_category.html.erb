@@ -1,0 +1,6 @@
+<tr>
+  <th><%= link_to category.title, admin_category_words_path(category) %></th>
+  <th><%= category.description %></th>
+  <th><%= link_to "edit", edit_admin_category_path(category) %>/<%= link_to "delete", category, method: :delete, 
+                                                data: { confirm: "You sure?" }  %></th>
+</tr>

@@ -235,3 +235,27 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+
+/* admin category */
+#create_category {
+  text-align: center;
+}
+
+.table {
+  width: 60%;
+  text-align: center;
+}
+
+#submit {
+  color: #FF0000;
+}
+
+/* micropost-category */
+.category-each {
+  border: solid 1px #8D8980;
+}
+
+.card {
+  height: 100px;
+}

@@ -4,4 +4,8 @@ class Word < ApplicationRecord
   has_one :lesson_word
   accepts_nested_attributes_for :wordchoices, allow_destroy: true
   validates :name,  presence: true
+  
+  def answer
+    self.wordchoices.where(correct: true).name
+  end
 end

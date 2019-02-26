@@ -31,3 +31,15 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+# マイクロポスト
+Micropost.create!(title: "Internship in Berlin",
+                  description: "You will visit Germany and talk with German students",
+                  category: "Internship",
+                  start_date: "2019/3/25",
+                  end_date: "2019/6/21",
+                  place: "ドイツ",
+                  deadline: "2019/2/21",
+                  price: "100",
+                  link: "https://getbootstrap.com/docs/4.3/components/alerts/")
+                  

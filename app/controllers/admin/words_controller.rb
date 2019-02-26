@@ -1,8 +1,8 @@
 class Admin::WordsController < ApplicationController
   
   def index
-    category = Category.find(params[:category_id])
-    @word = category.words.build
+    @category = Category.find(params[:category_id])
+    @words = Word.all
     @wordchoices = Wordchoice.all
   end
   
